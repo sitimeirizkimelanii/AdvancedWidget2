@@ -5,6 +5,11 @@ import android.support.v7.app.AppCompatActivity;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import butterknife.BindColor;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
+
 public class MainActivity extends AppCompatActivity {
 
     @BindView(R.id.editTextNama)
@@ -24,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         tvHasil.setTextColor(colorAccent);
     }
 
-    @onClick(R.id.buttonProses)
+    @OnClick(R.id.buttonProses)
     public void doProses() {
         tvHasil.setText("Nama Anda: " + etNama.getText());
     }
